@@ -9,29 +9,52 @@ project 1 - A Random Quote Generator
 
   //Quotes Came from the link below. 
   //https://genius.com/Juice-wrld-lucid-dreams-lyrics
+  //https://www.brainyquote.com/lists/topics/top-10-motivational-quotes
 /*** 
  * `quotes` array 
 ***/
 var quotes = [
   {
-    quote: 'I still see your shadows in my room Can\'t take back the love that I gave you It\'s to the point where I love and I hate you And I cannot change you so I must replace you (oh)',
-    source: 'Juice World',
+    quote: 'Life is about making an impact, not making an income.',
+    source: 'Kevin Kruse',
     citation: 'twitter',
-    year: 1996,
   },
   {
-    quote: 'Easier said than done, I thought you were the one Listenin to my heart instead of my head',
-    source: 'Juice World',
-    citation: 'facebook',
-    year: 2019,
-
-
+    quote: 'Whatever the mind of man can conceive and believe, it can achieve.',
+    source: 'Napoleon Hill',
+    citation: '365 Inspirational Quotes',
   },
   {
-    quote: 'You left me falling and landing inside my grave I know that you want me dead,I take prescriptions to make me feel a-okay I know it\'s all in my head I have these lucid dreams where I can\'t move a thing Thinking of you in my bed',
-    source: 'Juice World',
-    citation: 'instagram',
-  
+    quote: 'The most difficult thing is the decision to act, the rest is merely tenacity.',
+    source: 'Amelia Earhart',
+    citation: '365 Inspirational Quotes: Daily Motivation For Your Best Year Ever',
+  },
+  {
+    quote: 'Quality is not an act, it is a habit',
+    source: 'Aristotle',
+    citation: 'Brainy Quote',
+  },
+  {
+    quote: 'Only I can change my life. No one can do it for me',
+    source: 'Carol Burnett',
+    citation: 'Brainy Quote',
+  },
+  {
+    quote: 'The doers are the major thinkers. The people that really create the things that change this industry are both the thinker and doer in one person. ',
+    source: 'Steve Jobs',
+    citation: 'Twitter',
+  },
+  {
+    quote: 'Don’t let the noise of others\’ opinions drown out your own inner voice.',
+    source: 'Steve Jobs', 
+    citation: 'Stanford University commencement speech',
+    year: 2005, 
+  },
+  {
+    quote: 'Creativity is just connecting things', 
+    source: 'Steve Jobs', 
+    citation: 'Wired Article', 
+    year: 1995, 
   },
 ];
 /***
