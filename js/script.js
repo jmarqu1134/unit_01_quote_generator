@@ -18,43 +18,53 @@ var quotes = [
     quote: 'Life is about making an impact, not making an income.',
     source: 'Kevin Kruse',
     citation: 'twitter',
+    category: 'Motivational', 
   },
   {
     quote: 'Whatever the mind of man can conceive and believe, it can achieve.',
     source: 'Napoleon Hill',
     citation: '365 Inspirational Quotes',
+    category: 'Motivational',
+
   },
   {
     quote: 'The most difficult thing is the decision to act, the rest is merely tenacity.',
     source: 'Amelia Earhart',
     citation: '365 Inspirational Quotes: Daily Motivation For Your Best Year Ever',
+    category: 'Inspirational',
   },
   {
     quote: 'Quality is not an act, it is a habit',
     source: 'Aristotle',
     citation: 'Brainy Quote',
+    category: 'Motivational',
   },
   {
     quote: 'Only I can change my life. No one can do it for me',
     source: 'Carol Burnett',
     citation: 'Brainy Quote',
+    category: 'Motivational',
   },
   {
     quote: 'The doers are the major thinkers. The people that really create the things that change this industry are both the thinker and doer in one person. ',
     source: 'Steve Jobs',
     citation: 'Twitter',
+    category: 'Motivational',
   },
   {
     quote: 'Don’t let the noise of others\’ opinions drown out your own inner voice.',
     source: 'Steve Jobs', 
     citation: 'Stanford University commencement speech',
     year: 2005, 
+    category: 'Inspirational',
   },
   {
     quote: 'Creativity is just connecting things', 
     source: 'Steve Jobs', 
     citation: 'Wired Article', 
-    year: 1995, 
+    year: 1995,
+    category: 'Inspirational',
+ 
   },
 ];
 /***
@@ -76,7 +86,7 @@ function generateQuoteString (quoteArray) {
       if (!isNaN(quoteArray.year)) {
         quoteString += `<span class="year"> ${quoteArray.year} </span>`;
       }
-    quoteString += `</p>`;
+    quoteString += `<span class="category"> ${quoteArray.category} </span></p>`;
     return quoteString;
 }
 // createRGB will create a random number and empliment it to RGB color and change backgrounf color. 
