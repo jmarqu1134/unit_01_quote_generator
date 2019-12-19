@@ -62,30 +62,22 @@ var quotes = [
 ***/
 function getRandomQuote (quote) {
   var randomNumber = Math.floor(Math.random() * quotes.length );
-    console.log(`Random itteration Generated ${randomNumber}`); // This is a test to make sure getRandomQuote is working
     return quote[randomNumber];
 }
 //This will return a string dependenet on certian keys within the array of objects. 
 function generateQuoteString (quoteArray) {
-  var tempArray = quoteArray;
+  //var tempArray = quoteArray;
   var quoteString = '';
-    quoteString += '<p class="quote">' + tempArray.quote + '</p>';
-    quoteString += '<p class="source">' + tempArray.source;
-      if (isNaN(tempArray.citation)) {
-        console.log(`Citation was added to string: ${tempArray.citation}`);
-        quoteString += '<span class="citation">' + tempArray.citation + '</span>';
+    quoteString += `<p class="quote"> ${quoteArray.quote} </p>`;
+    quoteString += `<p class="source"> ${quoteArray.source}`;
+      if (isNaN(quoteArray.citation)) {
+        quoteString += `<span class="citation"> ${quoteArray.citation} </span>`;
       }
-      if (!isNaN(tempArray.year)) {
-        console.log(`Year was added to string: ${tempArray.year}`);
-        quoteString += '<span class="year">' + tempArray.year + '</span>';
+      if (!isNaN(quoteArray.year)) {
+        quoteString += `<span class="year"> ${quoteArray.year} </span>`;
       }
-    quoteString += '</p>';
+    quoteString += `</p>`;
     return quoteString;
-}
-//This  function will display the string I generated in generateQuoteString function. 
-function printQuotes (quoteDisplay) {
-  var outputQuote_Box = document.getElementById('quote-box');
-    outputQuote_Box.innerHTML = quoteDisplay;
 }
 // createRGB will create a random number and empliment it to RGB color and change backgrounf color. 
 function createRGB () {
@@ -96,17 +88,16 @@ function createRGB () {
 /***
  * `printQuote` function: This will call all functions needed to print the object and change the color. 
 ***/
-function printQuote (quoteDisplay) {
-  var testArray = [];
+function printQuote () {
+  var randomQuote = [];
   var stringArray;
-    testArray = getRandomQuote(quotes);
-    stringArray = generateQuoteString(testArray);
+  var outputQuote_Box = document.getElementById('quote-box');
+    randomQuote = getRandomQuote(quotes);
+    stringArray = generateQuoteString(randomQuote);
     createRGB();
-    printQuotes(stringArray);
-    console.log('Everythingcomplied fine..Complete.'); // This is a test to make everything complied correctly. 
+    outputQuote_Box.innerHTML = stringArray;
 }
 //timeFunction will create a window time interval set to a specific time. 
-//When ever the time finnishes or button is clicked it will reset: 
 const timeFunction = function functionOfTime() {
   clearInterval(window.timer);
   printQuote();
